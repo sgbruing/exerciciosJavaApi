@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table  style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 95vh; border-collapse: separate; border-spacing: 20px">
+        <tr>
+            <th>Nome:</th>
+            <th>Email:</th>
+            <th>Conta:</th>
+            <th>Agência:</th>
+        </tr>
+        <tr th:each="cliente : ${clientes}" style="text-align: center">
+            <td th:text="${cliente.nome}"></td>
+            <td th:text="${cliente.email}"></td>
+            <td th:text="${cliente.conta}"></td>
+            <td th:text="${cliente.agencia}"></td>
+        </tr>
+    </table>
+</body>
+</html>
